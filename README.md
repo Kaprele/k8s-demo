@@ -10,7 +10,6 @@ The repository includes:
 - **`frontend/`**: A frontend application to interact with the backend.
 - **`hello-pod/`**: Basic pod configurations for initial testing.
 - **`k8s/`**: Kubernetes manifests for deployments, services, and other resources.
-- **`setup.sh`**: A script to set up the Kubernetes environment and deploy resources.
 - **`skaffold.yaml`**: Configuration for Skaffold to streamline the development workflow.
 
 ## Prerequisites
