@@ -1,0 +1,25 @@
+apiVersion: skaffold/v4beta3
+kind: Config
+manifests:
+  rawYaml:
+    - ./k8s/*
+build:
+  local:
+    push: false # for skaffold depl
+  artifacts:
+    - image: kaprele/k8s-demo-backend
+      context: backend
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: './**/*.ts'
+            dest: .
+    - image: kaprele/k8s-hello-pod
+      context: hello-pod
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: './*.js'
+            dest: .
